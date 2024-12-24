@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>404 - Страница не найдена</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, #ffafbd, #ffc3a0); /* Яркий градиент */
+            color: #333;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            text-align: center;
+            overflow: hidden;
+        }
+        h1 {
+            font-size: 6em;
+            margin: 0;
+            color: #ff6b6b; /* Ярко-красный */
+            text-shadow: 2px 2px 0 rgba(255, 255, 255, 0.5);
+            animation: bounce 1.5s infinite; /* Анимация "прыжка" */
+        }
+        p {
+            font-size: 1.5em;
+            color: #4a4a4a; /* Темно-серый */
+            margin: 20px 0;
+            animation: fadeIn 1.5s ease-in-out; /* Плавное появление текста */
+        }
+        .animation {
+            font-size: 100px; /* Размер иконки */
+            margin-top: 20px;
+            animation: shake 0.5s infinite; /* Анимация "тряски" */
+        }
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-20px); }
+        }
+        @keyframes shake {
+            0%, 100% { transform: translateX(0); }
+            25% { transform: translateX(-5px); }
+            50% { transform: translateX(5px); }
+            75% { transform: translateX(-5px); }
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        a {
+            text-decoration: none;
+            color: #ffffff; /* Белый цвет текста */
+            background: #6a82fb; /* Яркий фон для кнопки */
+            padding: 10px 20px;
+            border-radius: 5px;
+            margin-top: 20px;
+            font-weight: bold;
+            transition: background 0.3s, transform 0.3s;
+            animation: fadeIn 2s ease-in-out; /* Плавное появление ссылки */
+        }
+        a:hover {
+            background: #ff6b6b; /* Цвет при наведении */
+            transform: scale(1.05); /* Увеличение при наведении */
+        }
+        .floating-objects {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            pointer-events: none; /* Не мешает взаимодействию с текстом */
+        }
+        .floating-object {
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            background: rgba(255, 255, 255, 0.8);
+            border-radius: 50%;
+            animation: float 10s infinite;
+            opacity: 0.7;
+        }
+        @keyframes float {
+            0% { transform: translateY(0); }
+            50% { transform: translateY(-50px); }
+            100% { transform: translateY(0); }
+        }
+    </style>
+</head>
+<body>
+    <h1>404</h1>
+    <p>Упс! Страница не найдена.</p>
+    <div class="animation">😕</div>
+    <a href="/">Вернуться на главную</a>
+    <div class="floating-objects">
+        <div class="floating-object" style="left: 10%; animation-delay: 0s;"></div>
+        <div class="floating-object" style="left: 30%; animation-delay: 2s;"></div>
+        <div class="floating-object" style="left: 50%; animation-delay: 4s;"></div>
+        <div class="floating-object" style="left: 70%; animation-delay: 6s;"></div>
+        <div class="floating-object" style="left: 90%; animation-delay: 8s;"></div>
+    </div>
+</body>
+</html>
